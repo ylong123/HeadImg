@@ -1,0 +1,245 @@
+.app {
+  width: 100%;
+  height: 100%;
+}
+.app .body {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+.app .main {
+  width: 100%;
+  height: calc(100% - 100px);
+  padding: 40px 0;
+}
+.app .main > div {
+  margin: 0 auto;
+}
+.app .main .frame {
+  width: 200px;
+  height: 200px;
+  background: rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+.app .frame .default {
+  width: 100%;
+  height: 100%;
+  font-size: 20vh;
+  color: #999;
+  text-align: center;
+}
+.app .frame .flag {
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  z-index: 1;
+}
+.app .frame .flag.circle {
+  width: 80px;
+  height: 80px;
+  background-image: url('./assets/svg/flag-circle.svg');
+  border-radius: 100%;
+  left: 0;
+  bottom: 0;
+}
+.app .frame .flag.circle2 {
+  width: 80px;
+  height: 80px;
+  background-image: url('./assets/svg/flag-circle.svg');
+  border-radius: 100%;
+  right: 0;
+  bottom: 0;
+}
+.app .frame .flag.square {
+  width: 80px;
+  height: 80px;
+  background-image: url('./assets/svg/flag-square.svg');
+  border-radius: 0 5px 0 0;
+  left: 0;
+  bottom: 0;
+}
+.app .frame .flag.square2 {
+  width: 80px;
+  height: 80px;
+  background-image: url('./assets/svg/flag-square.svg');
+  border-radius: 5px 0 0 0;
+  right: 0;
+  bottom: 0;
+}
+.app .frame .flag.oblong {
+  width: 120px;
+  height: 75px;
+  background-image: url('./assets/svg/flag-oblong.svg');
+  border-radius: 0 5px 0 0;
+  left: 0;
+  bottom: 0;
+}
+.app .frame .flag.oblong2 {
+  width: 120px;
+  height: 75px;
+  background-image: url('./assets/svg/flag-oblong2.svg');
+  border-radius: 0 0 5px 0;
+  left: 0;
+  top: 0;
+}
+.app .frame .flag.linear {
+  width: 100%;
+  height: 100%;
+  background-image: url('./assets/svg/flag-linear.svg');
+  left: 0;
+  top: 0;
+}
+.app .frame .flag.diagonal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url('./assets/svg/flag-diagonal.svg');
+  left: 0;
+  top: 0;
+}
+.app .frame .flag.vertical {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url('./assets/svg/flag-vertical.svg');
+  left: 0;
+  top: 0;
+}
+.app .frame .head {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.app .main .hidden {
+  display: none;
+}
+.app .main .options {
+  width: fit-content;
+  margin: 30px auto;
+}
+.app .main .options button {
+  width: 100px;
+  margin: 0 10px;
+}
+.app .main .hint {
+  width: fit-content;
+  font-size: 12px;
+  color: #666;
+  line-height: 18px;
+}
+.adm-popup .adm-popup-body {
+  height: fit-content;
+  text-align: center;
+}
+.adm-popup .popup-item {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  border-radius: 2px;
+  margin: 3px;
+  background: #ddd;
+  overflow: hidden;
+  position: relative;
+}
+.adm-popup .popup-item .item {
+  width: 100%;
+  height: 100%;
+  background-color: #de2910;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  z-index: 1;
+}
+.adm-popup .popup-item .item.none {
+  width: fit-content;
+  height: fit-content;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 30px;
+  color: #999;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+.adm-popup .popup-item .item.circle {
+  width: 50%;
+  height: 50%;
+  background-image: url('./assets/svg/flag-circle.svg');
+  border-radius: 100%;
+  left: 0;
+  bottom: 0;
+}
+.adm-popup .popup-item .item.circle2 {
+  width: 50%;
+  height: 50%;
+  background-image: url('./assets/svg/flag-circle.svg');
+  border-radius: 100%;
+  right: 0;
+  bottom: 0;
+}
+.adm-popup .popup-item .item.square {
+  width: 50%;
+  height: 50%;
+  background-image: url('./assets/svg/flag-square.svg');
+  border-radius: 0 5px 0 0;
+  left: 0;
+  bottom: 0;
+}
+.adm-popup .popup-item .item.square2 {
+  width: 50%;
+  height: 50%;
+  background-image: url('./assets/svg/flag-square.svg');
+  border-radius: 5px 0 0 0;
+  right: 0;
+  bottom: 0;
+}
+
+.adm-popup .popup-item .item.oblong {
+  width: 100%;
+  height: 80%;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url('./assets/svg/flag-oblong.svg');
+  border-radius: 0 5px 0 5px;
+  transform: translate(-25%, 35%) scale(0.5);
+  left: 0;
+  bottom: 0;
+}
+.adm-popup .popup-item .item.oblong2 {
+  width: 100%;
+  height: 80%;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url('./assets/svg/flag-oblong2.svg');
+  border-radius: 5px 0 5px 0;
+  transform: translate(-25%, -25%) scale(0.5);
+  left: 0;
+  top: 0;
+}
+.adm-popup .popup-item .item.linear {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url('./assets/svg/flag-linear.svg');
+  left: 0;
+  top: 0;
+}
+.adm-popup .popup-item .item.diagonal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url('./assets/svg/flag-diagonal.svg');
+  left: 0;
+  top: 0;
+}
+.adm-popup .popup-item .item.vertical {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url('./assets/svg/flag-vertical.svg');
+  left: 0;
+  top: 0;
+}
