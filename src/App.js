@@ -10,18 +10,6 @@ import './App.css'
 
 export default class App extends Component {
   state = {
-    types: [
-      'none',
-      'circle',
-      'circle2',
-      'square',
-      'square2',
-      'oblong',
-      'oblong2',
-      'linear',
-      'vertical',
-      'diagonal'
-    ].reverse(),
     clsType: null,
     style: {
       background: 'none'
@@ -77,7 +65,6 @@ export default class App extends Component {
     }
   }
   downloadFile = Debounce(() => {
-    console.log(123)
     if (this.state.hasUpload) {
       window
         .html2canvas(this.frameRef, {
@@ -88,15 +75,15 @@ export default class App extends Component {
           let src = canvas.toDataURL()
           setTimeout(() => {
             Dialog.alert({
-              title: '保存文件',
+              title: '保存图片',
               content: (
                 <>
                   <img src={src} alt='' style={{ width: '100%' }} />
                   <p
                     style={{
                       textAlign: 'center',
-                      fontSize: '13px',
-                      marginTop: '5px'
+                      fontSize: '14px',
+                      marginTop: '8px'
                     }}
                   >
                     长按保存图片
@@ -109,14 +96,19 @@ export default class App extends Component {
     }
   })
   render () {
-    const { style, hasUpload, types, clsType, isOpen } = this.state
-    const Anchor = props => {
-      return (
-        <a ref={a => (this.aRef = a)} {...props}>
-          {''}
-        </a>
-      )
-    }
+    const { style, hasUpload, clsType, isOpen } = this.state
+    const types = [
+      'none',
+      'circle',
+      'circle2',
+      'square',
+      'square2',
+      'oblong',
+      'oblong2',
+      'linear',
+      'vertical',
+      'diagonal'
+    ].reverse()
 
     return (
       <div className='app'>
@@ -128,13 +120,12 @@ export default class App extends Component {
               {hasUpload ? (
                 ''
               ) : (
-                <div class='default'>
+                <div className='default'>
                   <UserOutline />
                 </div>
               )}
             </div>
             <div className='hidden'>
-              <Anchor download='HeadImg' />
               <input
                 ref={file => (this.fileRef = file)}
                 type='file'
