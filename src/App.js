@@ -17,10 +17,10 @@ export default class App extends Component {
     hasUpload: false,
     isOpen: false
   }
-  openPopup = () => {
-    this.setState({
-      isOpen: !this.state.isOpen
-    })
+  openPopup = isOpen => {
+    return () => {
+      this.setState({ isOpen })
+    }
   }
   changeType = type => {
     return () => {
@@ -134,7 +134,11 @@ export default class App extends Component {
               />
             </div>
             <div className='options'>
-              <Button color='success' size='small' onClick={this.openPopup}>
+              <Button
+                color='success'
+                size='small'
+                onClick={this.openPopup(true)}
+              >
                 选择样式
               </Button>
               <Button
@@ -164,7 +168,7 @@ export default class App extends Component {
         </div>
         <Popup
           visible={isOpen}
-          onMaskClick={this.openPopup}
+          onMaskClick={this.openPopup(false)}
           bodyStyle={{ minHeight: '50vh' }}
         >
           {types.map((type, index) => {
